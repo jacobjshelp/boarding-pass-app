@@ -10,7 +10,7 @@ function NameDisplay({
   return (
     <div>
       <h1>{airlineName}</h1>
-      <h2 id="passengerName">
+      <h2>
         {passengerLastName}, {passengerFirstName}
       </h2>
     </div>

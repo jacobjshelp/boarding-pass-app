@@ -1,10 +1,9 @@
 import { useState } from 'react'
-import './App.css'
-import BoardingPass from './components/BoardingPass'
+import './styles/App.css'
 import Footer from './components/Footer'
-import TicketInfo from './components/TicketInfo'
 import Header from './components/Header'
 import useGetBoardingPasses from './hooks/useGetBoardingPasses'
+import MainSection from './components/MainSection'
 
 function App() {
   const [boardingPassIndex, setboardingPassIndex] = useState(0)
@@ -18,11 +17,7 @@ function App() {
   return (
     <div id="container">
       <Header showNextBoardingPass={showNextBoardingPass} />
-      <div id="middle">
-        {data && <BoardingPass info={data[boardingPassIndex]} />}
-        {!data && <BoardingPass info={undefined} />}
-        <TicketInfo />
-      </div>
+      <MainSection boardingPassIndex={boardingPassIndex} data={data} />
       <Footer />
     </div>
   )

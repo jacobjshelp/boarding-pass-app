@@ -10,7 +10,7 @@ function GateInformationDisplay({
   gateClosesTime: Date
 }) {
   return (
-    <div className="gateInformationDisplay">
+    <div>
       <InfoBox labelText={'Terminal'} value={terminal} />
       <InfoBox
         labelText={'Boarding time'}

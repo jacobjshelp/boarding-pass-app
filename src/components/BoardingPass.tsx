@@ -7,7 +7,7 @@ import LoadingDisplay from './LoadingDisplay'
 
 export default function BoardingPass({ info }: { info?: BoardingPassInfo }) {
   return (
-    <div id="boardingPass" className="mainContainer">
+    <div id="boardingPass">
       {!info && <LoadingDisplay />}
       {info && (
         <>
