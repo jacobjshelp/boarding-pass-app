@@ -3,10 +3,12 @@ import boardingPassFromServerResponse from '../utils/convertDTO'
 import { BoardingPassInfoDTO } from '../types'
 
 export default function useGetBoardingPasses() {
+  const baseURL = import.meta.env.VITE_BASE_URL
+
   return useQuery({
     queryKey: ['posts'],
     queryFn: async () => {
-      const response = await fetch('http://localhost:5000/boardingPasses')
+      const response = await fetch(`${baseURL}/boardingPasses`)
       let data = await response.json()
       data = data.map((bp: BoardingPassInfoDTO) => {
         return boardingPassFromServerResponse(bp)
