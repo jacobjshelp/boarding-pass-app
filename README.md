@@ -1,50 +1,15 @@
-# React + TypeScript + Vite
+# Steps
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Clone complete project and look around at the code
+- Define types (all at once, this is unusual but we do it for the sake of simplicity)
+- Create UI structure (Header, MainSection, Footer) and the surrounding container div
+- Create the Header component with ProfilePhoto, text, and ArrowRightIcon with onClick for showing next boardingPass
+- Use useQuery from tanstack to make a hook to fetch the data from the backend.
+- Make the MainSection component and an empty BoardingPass Component. In the App component fetch the data, and pass the data along with the current index to the Main Section, which then gives the data to the BoardingPass component.
+- Add the TicketInfo component and the InfoBox components with hardcoded data.
 
-Currently, two official plugins are available:
+## Extra challenges
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Conditionally render the next flight button (only show it if there are multiple boarding passes)
+- Instead of hardcoding the Ticket Info then get it from the backend (similar to the data for the boarding pass)
+-
