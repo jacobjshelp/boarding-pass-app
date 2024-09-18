@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import boardingPassFromServerResponse from '../utils/convertDTO'
+import boardingPassFromDTO from '../utils/convertDTO'
 import { BoardingPassInfoDTO } from '../types'
 
 export default function useGetBoardingPasses() {
@@ -11,7 +11,7 @@ export default function useGetBoardingPasses() {
       const response = await fetch(`${baseURL}/boardingPasses`)
       let data = await response.json()
       data = data.map((bp: BoardingPassInfoDTO) => {
-        return boardingPassFromServerResponse(bp)
+        return boardingPassFromDTO(bp)
       })
       return data
     },

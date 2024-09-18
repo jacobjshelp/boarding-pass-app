@@ -1,6 +1,6 @@
 import { BoardingPassInfo, BoardingPassInfoDTO } from '../types'
 
-export default function boardingPassFromServerResponse(
+export default function boardingPassFromDTO(
   dto: BoardingPassInfoDTO
 ): BoardingPassInfo {
   return {
