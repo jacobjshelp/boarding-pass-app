@@ -9,10 +9,11 @@ function MainSection({
   data?: BoardingPassInfo[]
   boardingPassIndex: number
 }) {
+  const boardingPass = data !== undefined ? data[boardingPassIndex] : undefined
+
   return (
     <div id="mainSection">
-      {data && <BoardingPass info={data[boardingPassIndex]} />}
-      {!data && <BoardingPass info={undefined} />}
+      <BoardingPass boardingPass={boardingPass} />
       <TicketInfo />
     </div>
   )

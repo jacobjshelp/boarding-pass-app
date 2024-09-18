@@ -5,30 +5,34 @@ import NameDisplay from './NameDisplay'
 import QRCodeDisplay from './QRCodeDisplay'
 import LoadingDisplay from './LoadingDisplay'
 
-export default function BoardingPass({ info }: { info?: BoardingPassInfo }) {
+export default function BoardingPass({
+  boardingPass,
+}: {
+  boardingPass?: BoardingPassInfo
+}) {
   return (
     <div id="boardingPass">
-      {!info && <LoadingDisplay />}
-      {info && (
+      {!boardingPass && <LoadingDisplay />}
+      {boardingPass && (
         <>
           <NameDisplay
-            airlineName={info.airlineName}
-            passengerLastName={info.passengerLastName}
-            passengerFirstName={info.passengerFirstName}
+            airlineName={boardingPass.airlineName}
+            passengerLastName={boardingPass.passengerLastName}
+            passengerFirstName={boardingPass.passengerFirstName}
           />
-          <QRCodeDisplay qRValue={info.qRValue} />
+          <QRCodeDisplay qRValue={boardingPass.qRValue} />
           <br />
           <FlightTimeDisplay
-            departureTime={info.departureTime}
-            arrivalTime={info.arrivalTime}
-            departureAirport={info.departureAirport}
-            destinationAirport={info.destinationAirport}
+            departureTime={boardingPass.departureTime}
+            arrivalTime={boardingPass.arrivalTime}
+            departureAirport={boardingPass.departureAirport}
+            destinationAirport={boardingPass.destinationAirport}
           />
           <br />
           <GateInformationDisplay
-            terminal={info.terminal}
-            boardingTime={info.boardingTime}
-            gateClosesTime={info.gateClosesTime}
+            terminal={boardingPass.terminal}
+            boardingTime={boardingPass.boardingTime}
+            gateClosesTime={boardingPass.gateClosesTime}
           />
           <br />
         </>
