@@ -6,7 +6,7 @@ export default function useGetBoardingPasses() {
   const baseURL = import.meta.env.VITE_BASE_URL
 
   return useQuery({
-    queryKey: ['posts'],
+    queryKey: ['boardingPasses'],
     queryFn: async () => {
       const response = await fetch(`${baseURL}/boardingPasses`)
       let data = await response.json()
