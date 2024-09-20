@@ -1,0 +1,30 @@
+@import url(MainSection.css);
+@import url(Header.css);
+@import url(Footer.css);
+
+html {
+  font-size: 62.5%;
+  font-family: 'Poppins';
+  font-weight: 300;
+  --primary1: #fabc3f;
+  --primary2: rgba(0, 0, 255, 0.2);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-size: 1.6rem;
+}
+
+h1,
+h2 {
+  margin-left: 0.8rem;
+}
+
+#container {
+  display: grid;
+  grid-template-rows: auto minmax(20rem, 1fr) auto;
+  grid-template-columns: 100%;
+  min-height: 100vh;
+}
