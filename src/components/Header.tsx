@@ -1,4 +1,4 @@
-import { ArrowRightIcon } from '../../icons/ArrowRightIcon'
+import { ArrowRightIcon } from '../icons/ArrowRightIcon'
 import ProfilePhoto from './ProfilePhoto'
 
 function Header({
