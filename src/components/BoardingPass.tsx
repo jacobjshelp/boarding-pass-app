@@ -1,5 +1,7 @@
 import { BoardingPassInfo } from '../types'
 import LoadingDisplay from './LoadingDisplay'
+import NameDisplay from './NameDisplay'
+import QRCodeDisplay from './QRCodeDisplay'
 
 export default function BoardingPass({
   boardingPass,
@@ -9,7 +11,17 @@ export default function BoardingPass({
   return (
     <div id="boardingPass">
       {!boardingPass && <LoadingDisplay />}
-      {boardingPass && boardingPass.airlineName}
+      {boardingPass && (
+        <>
+          <NameDisplay
+            airlineName={boardingPass.airlineName}
+            passengerLastName={boardingPass.passengerLastName}
+            passengerFirstName={boardingPass.passengerFirstName}
+          />
+          <QRCodeDisplay qRValue={boardingPass.qRValue} />
+          <br />
+        </>
+      )}
     </div>
   )
 }
