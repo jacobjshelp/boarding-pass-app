@@ -1,0 +1,17 @@
+#mainSection {
+  display: grid;
+  margin: 1.2rem 1.2rem 1.2rem 1.2rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+}
+
+#mainSection > div:first-of-type {
+  border-top: 0;
+}
+
+#boardingPass {
+  background-color: var(--primary1);
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+}
