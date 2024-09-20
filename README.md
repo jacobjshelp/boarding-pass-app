@@ -7,6 +7,9 @@
 - Use useQuery from tanstack to make a hook to fetch the data from the backend.
 - Make the MainSection component and an empty BoardingPass Component. In the App component fetch the data, and pass the data along with the current index to the Main Section, which then gives the data to the BoardingPass component.
 - Add the TicketInfo component and the InfoBox components with hardcoded data.
+- Create the LoadingDisplay and show it in the BoardingPass component if data is still undefined.
+- Create the NameDisplay and the QRCodeDisplay
+- Create the FlightTimeDisplay and the GateInformationDisplay
 
 ## Extra challenges
 
