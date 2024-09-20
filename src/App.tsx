@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './styles/App.css'
-import Header from './styles/Components/Header'
+import Header from './components/Header'
 import useGetBoardingPasses from './hooks/useGetBoardingPasses'
 import MainSection from './components/MainSection'
 

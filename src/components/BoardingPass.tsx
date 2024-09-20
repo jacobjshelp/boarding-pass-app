@@ -1,4 +1,5 @@
 import { BoardingPassInfo } from '../types'
+import LoadingDisplay from './LoadingDisplay'
 
 export default function BoardingPass({
   boardingPass,
@@ -7,7 +8,7 @@ export default function BoardingPass({
 }) {
   return (
     <div id="boardingPass">
-      {!boardingPass && <>Loading</>}
+      {!boardingPass && <LoadingDisplay />}
       {boardingPass && boardingPass.airlineName}
     </div>
   )

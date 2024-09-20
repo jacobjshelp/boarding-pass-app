@@ -2,6 +2,7 @@
 @import url(Header.css);
 @import url(Footer.css);
 @import url(InfoBox.css);
+@import url(Graphics.css);
 
 html {
   font-size: 62.5%;
