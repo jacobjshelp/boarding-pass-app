@@ -1,6 +1,7 @@
 @import url(MainSection.css);
 @import url(Header.css);
 @import url(Footer.css);
+@import url(InfoBox.css);
 
 html {
   font-size: 62.5%;
